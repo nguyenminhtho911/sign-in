@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up</title>
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="container">
+      <div class="box-left">
+        <form action="#" id="form-signin">
+          <div class="logo"><img src="./images/logo.png" alt="logo" width="74" height="57"></div>
+          <h2 class="heading">Welcome back!</h2>
+          <p class="desc">Enter to get unlimited access to data & information.</p>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email<span class="required">*</span></label>
+            <input id="email" name="email" type="text" placeholder="Enter your mail address" class="form-control">
+            <span class="form-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="form-label">Password<span class="required">*</span></label>
+            <div class="password-show">
+              <input id="password" name="password" type="password" placeholder="Enter password" class="form-control">
+              <i class="uil uil-eye" id="toggle-password"></i>
+            </div>
+            <small class="form-message"></small>
+          </div>
+
+          <div class="form-remember">
+            <div class="form-checkbox">
+              <label for="remember">
+                <input type="checkbox" id="remember" name="remember">
+                <span></span> Remember me
+              </label>
+            </div>
+            <a href="#">Forgot your password?</a>
+          </div>
+
+          <button class="form-submit">Log In</button>
+
+          <p class="suggest"><span>Or, Login with</span></p>
+
+          <a href="#" class="google-btn">Sign up with google</a>
+
+          <p class="note-reister">Don't have an account ? <a href="#">Register here</a></p>
+
+        </form>
+
+      </div>
+      <div class="box-right">
+        <img src="./images/banner.jpg" alt="banner" width="726" height="984">
+      </div>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+</html>

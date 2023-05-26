@@ -1,0 +1,139 @@
+.wrapper {
+  padding: 5%;
+  max-width: calc(1410px + 5%);
+  @include mediaQuery(767px) {
+    padding-top: 12%;
+    padding-bottom: 12%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  -webkit-box-shadow: 7px 20px 50px 7px rgba(26,26,26,0.18); 
+  box-shadow: 7px 20px 50px 7px rgba(26,26,26,0.18);
+  .box {
+    &-left {
+      width: 50%;
+      padding: 7% 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include mediaQuery(767px) {
+        width: 100%;
+        padding-top: 12%;
+        padding-bottom: 14%;
+      }
+    }
+    &-right {
+      width: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @include mediaQuery(767px) {
+        display: none;
+      }
+    }
+  }
+}
+
+#form-signin {
+  .logo {
+    margin-bottom: 40px;
+    @include mediaQuery(767px) {
+      margin-bottom: 30px;
+      text-align: center;
+      img {
+        display: inline-block;
+      }
+    }
+  }
+  .heading {
+    font-size: 2rem;
+    @include mediaQuery(767px) {
+      text-align: center;
+    }
+  }
+  .desc {
+    font-size: $fs-1;
+    line-height: 1.3;
+    margin: 20px 0 30px;
+    color: #575561;
+    @include mediaQuery(767px) {
+      text-align: center;
+    }
+  }
+  .form-remember {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: 500;
+    flex-wrap: wrap;
+    gap: 10px;
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  .suggest {
+    position: relative;
+    text-align: center;
+    margin: 28px 0;
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 0.5px);
+      background-color: $gray-color;
+    }
+    span {
+      color: #9899a4;
+      background-color: #fff;
+      padding: 0 10px;
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+    }
+  }
+
+  .form-submit {
+    @include styleButton($blue-color, #fff, $blue-color, 100%);
+    &:hover {
+      @include styleButtonHover(#381ce5, #fff, #381ce5);
+    }
+  }
+  .google-btn {
+    @include styleButton(#fff, #271d44, $gray-color, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+    padding: 13px;
+    &::before {
+      content: url(../images/icon-gg.png);
+      margin-right: 10px;
+      line-height: 0;
+    }
+    &:hover {
+      @include styleButtonHover(null, #000, #bcbbbd);
+    }
+  }
+  .note-reister {
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

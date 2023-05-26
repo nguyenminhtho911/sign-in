@@ -1,0 +1,131 @@
+body {
+  font-family: $font;
+  font-size: $fs;
+  color: $text-color;
+  line-height: 1;
+  font-weight: 400;
+  background-color: #d4d6ea;
+}
+
+.wrapper {
+  max-width: 1410px;
+  margin: 0 auto;
+}
+a {
+  color: $blue-color;
+  font-weight: 500;
+}
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: $font;
+}
+input {
+  font-family: $font;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  &.invalid .form-control {
+    border-color: $red-color;
+  }
+
+  &.invalid .form-message {
+    color: $red-color;
+  }
+}
+
+.password-show {
+  position: relative;
+  .form-control {
+    width: 100%;
+  }
+  #toggle-password {
+    color: #cfcfd1;
+    font-size: 1.3rem;
+    margin-left: auto;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.form-label {
+  font-size: $fs-1;
+  font-weight: 500;
+  padding-bottom: 10px;
+  .required {
+    color: $red-color;
+    margin-left: 3px;
+  }
+}
+
+.form-message {
+  padding: 4px 0 0;
+  font-size: $fs - 1px;
+  line-height: 1.5rem;
+}
+
+.form-control {
+  padding: 17px;
+  border: 1px solid $gray-color;
+  border-radius: 8px;
+  transition: all 0.3s;
+  &::placeholder {
+    color: #928f9d;
+    font-size: $fs;
+  }
+  &:focus {
+    border-color: $blue-color;
+  }
+}
+
+.form-checkbox {
+  label {
+    display: flex;
+    align-items: center;
+  }
+  span {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $gray-color;
+    border-radius: 3px;
+    margin-right: 7px;
+    margin-top: -1px;
+    cursor: pointer;
+  }
+  input[type="checkbox"] {
+    display: none;
+    &:checked + span {
+      background-color: $blue-color;
+    }
+    &:checked + span:before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 6px;
+      height: 10px;
+      top: 50%;
+      left: 50%;
+      margin-left: -3px;
+      margin-top: -7px;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
