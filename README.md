@@ -11,6 +11,11 @@
   - Validate form
 
 ### Sử dụng
+- Install Sass:
+```
+npm install -g sass
+```
+
 - Compile sass to css:
 ```
 sass --watch sass/style.scss css/style.css
